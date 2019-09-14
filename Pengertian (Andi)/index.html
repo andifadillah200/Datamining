@@ -338,80 +338,67 @@ s k=\frac{\overline{X}-M o}{s}
 <p>​   Rumus untuk memcri kuartil 1,2, dan 3 sebagai berikut:</p>
 <p>$$
 IQR=Q3−Q1
-$$
-import pandas as pd
+$$</p>
+<div class="codehilite"><pre><span></span>import pandas as pd
 from scipy import stats
 import numpy as np
 import seaborn as sns
 import matplotlib as plt
-data = pd.read_csv("ANDIAJADOANG.csv",delimiter=";")
-cm = sns.light_palette("gold", as_cmap=True)
-data.style.background_gradient(cmap=cm)</p>
-<p>colum = data.columns.tolist()
+data = pd.read_csv(&quot;ANDIAJADOANG.csv&quot;,delimiter=&quot;;&quot;)
+cm = sns.light_palette(&quot;gold&quot;, as_cmap=True)
+data.style.background_gradient(cmap=cm)
+
+colum = data.columns.tolist()
 for x in colum :
     ds = [x for x in data[x]]
     desc = data[x].describe()
     array = [x for x in desc]
-    print("Detail kolom",x)
-    print("rata-rata: ",array[1])
-    print("Median: ",np.median(np.array(ds)))
-    print("Modus: ",stats.mode(ds))
-    print("Standard deviasi: ",np.std(ds))
-    print("varian: ",stats.variation(ds))
-    print("Skewness: ",stats.skew(ds))
-    print("Quartil 1: ",array[4])
-    print("Quartil 2: ",array[5])
-    print("Quartil 3: ",array[6])
-    sns.distplot(data[x])</p>
-<div class="codehilite"><pre><span></span>print(&quot;\n&quot;)
-Detail kolom 61
-rata-rata:  60.79559118236473
-Median:  62.0
-Modus:  ModeResult(mode=array([64]), count=array([18]))
-Standard deviasi:  11.589950582734287
-varian:  0.1906380110355147
-Skewness:  -0.12646695150965023
-Quartil 1:  50.0
-Quartil 2:  62.0
-Quartil 3:  71.0
-C:\Users\HP\Anaconda3\lib\site-packages\scipy\stats\stats.py:1713: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
-  return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
+    print(&quot;Detail kolom&quot;,x)
+    print(&quot;rata-rata: &quot;,array[1])
+    print(&quot;Median: &quot;,np.median(np.array(ds)))
+    print(&quot;Modus: &quot;,stats.mode(ds))
+    print(&quot;Standard deviasi: &quot;,np.std(ds))
+    print(&quot;varian: &quot;,stats.variation(ds))
+    print(&quot;Skewness: &quot;,stats.skew(ds))
+    print(&quot;Quartil 1: &quot;,array[4])
+    print(&quot;Quartil 2: &quot;,array[5])
+    print(&quot;Quartil 3: &quot;,array[6])
+    sns.distplot(data[x])
 </pre></div>
 
 
 <p>​  <br />
-    Detail kolom 75
-    rata-rata:  59.829659318637276
-    Median:  60.0
-    Modus:  ModeResult(mode=array([74]), count=array([25]))
-    Standard deviasi:  12.272500585676056
-    varian:  0.20512402586676778
-    Skewness:  -0.011342547630916588
-    Quartil 1:  49.0
-    Quartil 2:  60.0
-    Quartil 3:  71.0</p>
+​    Detail kolom 75
+​    rata-rata:  59.829659318637276
+​    Median:  60.0
+​    Modus:  ModeResult(mode=array([74]), count=array([25]))
+​    Standard deviasi:  12.272500585676056
+​    varian:  0.20512402586676778
+​    Skewness:  -0.011342547630916588
+​    Quartil 1:  49.0
+​    Quartil 2:  60.0
+​    Quartil 3:  71.0</p>
+<p>​    Detail kolom 62
+​    rata-rata:  59.88376753507014
+​    Median:  60.0
+​    Modus:  ModeResult(mode=array([46]), count=array([20]))
+​    Standard deviasi:  11.987907945420833
+​    varian:  0.20018626814687757
+​    Skewness:  -0.023513365862310294
+​    Quartil 1:  49.0
+​    Quartil 2:  60.0
+​    Quartil 3:  70.0</p>
 <p>​  <br />
-    Detail kolom 62
-    rata-rata:  59.88376753507014
-    Median:  60.0
-    Modus:  ModeResult(mode=array([46]), count=array([20]))
-    Standard deviasi:  11.987907945420833
-    varian:  0.20018626814687757
-    Skewness:  -0.023513365862310294
-    Quartil 1:  49.0
-    Quartil 2:  60.0
-    Quartil 3:  70.0</p>
-<p>​  <br />
-    Detail kolom 62.1
-    rata-rata:  59.62725450901804
-    Median:  60.0
-    Modus:  ModeResult(mode=array([52]), count=array([19]))
-    Standard deviasi:  11.32138180830651
-    varian:  0.18986924522232132
-    Skewness:  0.07811727556255692
-    Quartil 1:  50.0
-    Quartil 2:  60.0
-    Quartil 3:  69.0</p>
+​    Detail kolom 62.1
+​    rata-rata:  59.62725450901804
+​    Median:  60.0
+​    Modus:  ModeResult(mode=array([52]), count=array([19]))
+​    Standard deviasi:  11.32138180830651
+​    varian:  0.18986924522232132
+​    Skewness:  0.07811727556255692
+​    Quartil 1:  50.0
+​    Quartil 2:  60.0
+​    Quartil 3:  69.0</p>
                 
                   
                 
